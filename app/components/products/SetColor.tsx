@@ -21,31 +21,24 @@ const SetColor: React.FC<SetColorProps> = ({
                             key={image.color}
                             onClick={() => handleColorSelect(image)} 
                             className={`
-                                h-7 
-                                    w-7 
-                                    rounded-full 
-                                    border-teal-300 
-                                    flex 
-                                    items-center 
-                                    justify-center 
-                                    ${
-                                        cartProduct.selectedImg.color === image.color
-                                            ? "border-[1.5px]"
-                                            : "border-none"
-                                    }`}
+                                h-16 
+                                w-16
+                                border-teal-300 
+                                flex 
+                                items-center 
+                                justify-center 
+                                rounded-lg
+                                ${
+                                    cartProduct.selectedImg.color === image.color
+                                        ? "border-[2px]"
+                                        : "border-none"
+                                }`}
                         >
-                            <div 
-                                style={{background: image.colorCode}} 
-                                className="
-                                h-5
-                                w-5
-                                rounded-full
-                                border[1.2px]
-                                border-slate-300
-                                cursor-pointer
-                                ">
-                            </div>
+                            
+                            <div className="cursor-pointer text-center"><p>{image.color}</p></div>
+                            
                         </div>
+                        
                     );
                 })}
             </div>
