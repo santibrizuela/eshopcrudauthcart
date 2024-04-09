@@ -81,45 +81,43 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         [cartProduct.selectedImg]
     );
 
-    //const handleQtyIncrease = useCallback(() => {
-    //    if(cartProduct.quantity === 99) {
-    //        return;
-    //    }
-    //    setCartProduct((prev) => {
-    //        return{ ...prev, quantity: ++prev.quantity };
-    //    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //}, [cartProduct]);
-    //const handleQtyDecrease = useCallback(() => {
-    //    if(cartProduct.quantity === 1) {
-    //        return;
-    //    }
-    //    setCartProduct((prev) => {
-    //        return{ ...prev, quantity: --prev.quantity };
-    //    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //}, [cartProduct]);
-
-    //CORREGIDO X CHATGPT
     const handleQtyIncrease = useCallback(() => {
         if(cartProduct.quantity === 99) {
             return;
         }
-
         setCartProduct((prev) => {
-            return { ...prev, quantity: prev.quantity ++ };
+            return{ ...prev, quantity: ++prev.quantity };
         });
     }, [cartProduct]);
-    
     const handleQtyDecrease = useCallback(() => {
         if(cartProduct.quantity === 1) {
             return;
         }
-
         setCartProduct((prev) => {
-            return { ...prev, quantity: prev.quantity -- };
+            return{ ...prev, quantity: --prev.quantity };
         });
     }, [cartProduct]);
+
+    //CORREGIDO X CHATGPT
+    //const handleQtyIncrease = useCallback(() => {
+    //    if(cartProduct.quantity === 99) {
+    //        return;
+    //    }
+
+    //    setCartProduct((prev) => {
+    //        return { ...prev, quantity: prev.quantity ++ };
+    //    });
+    //}, [cartProduct]);
+    
+    //const handleQtyDecrease = useCallback(() => {
+    //    if(cartProduct.quantity === 1) {
+    //        return;
+    //    }
+
+    //    setCartProduct((prev) => {
+    //        return { ...prev, quantity: prev.quantity -- };
+    //    });
+    //}, [cartProduct]);
     
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
