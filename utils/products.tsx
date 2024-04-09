@@ -1,12 +1,3 @@
-import Termostatos1 from "@/src/assets/termostatos.png";
-import Termostatos2 from "@/src/assets/ttcaja.png";
-import Blindada1 from "@/src/assets/blindadahornosup.png";
-import Blindada2 from "@/src/assets/blindadahornoinf.png";
-import Blindada3 from "@/src/assets/blindadahornopauna.png";
-import Blindada4 from "@/src/assets/blindadahornito430.png";
-import Blindada5 from "@/src/assets/parrillahorno.jpg";
-
-
 //I am changing the image links from firebase to 
 //amazon, firebase has issues with these direct links. 
 //Please remember to add the amazon link(that will 
@@ -16,31 +7,31 @@ import Blindada5 from "@/src/assets/parrillahorno.jpg";
 export const products = [
     {
       id: "64a654593e91b8e73a351e9b",
-      name: "Termostato Mecánico",
-      description: "Termostato cerámico con bulbo y capilar de 800mm. Temperaturas: 40°/90°/120°/220°/300°.",
-      price: 17299,
-      brand: "Termostato",
-      category: "Termostato",
+      name: "iphone 14",
+      description: "Short description",
+      price: 2999,
+      brand: "apple",
+      category: "Phone",
       inStock: true,
       images: [
         {
-          color: "TT Mec",
+          color: "White",
           colorCode: "#FFFFFF",
           image:
-          Termostatos1,
+            "https://m.media-amazon.com/images/I/71p-tHQ0u1L._AC_SX679_.jpg",
         },
         {
-          color: "TT Mec en caja",
+          color: "Gray",
           colorCode: "#808080",
           image:
-          Termostatos2,
+            "https://m.media-amazon.com/images/I/417tEj3iJ8L._AC_.jpg",
         },
       ],
       reviews: [],
     },
     {
       id: "64a4ebe300900d44bb50628a",
-      name: "Blindadas",
+      name: "Logitech MX Keys Advanced Wireless Illuminated Keyboard, Tactile Responsive Typing, Backlighting, Bluetooth, USB-C, Apple macOS, Microsoft Windows, Linux, iOS, Android, Metal Build (Black)",
       description:
         "PERFECT STROKE KEYS - Spherically-dished keys match the shape of your fingertips, offering satisfying feedback with every tap\nCOMFORT AND STABILITY - Type with confidence on a keyboard crafted for comfort, stability, and precision",
       price: 102.99,
@@ -49,34 +40,10 @@ export const products = [
       inStock: true,
       images: [
         {
-          color: "Horno Superior",
+          color: "Black",
           colorCode: "#000000",
           image:
-            Blindada1,
-        },
-        {
-          color: "Horno Inferior",
-          colorCode: "#000000",
-          image:
-            Blindada2,
-        },
-        {
-          color: "Horno Pauna",
-          colorCode: "#000000",
-          image:
-            Blindada3,
-        },
-        {
-          color: "Hornito",
-          colorCode: "#000000",
-          image:
-            Blindada4,
-        },
-        {
-          color: "Parrilla Doble",
-          colorCode: "#000000",
-          image:
-            Blindada5,
+            "https://m.media-amazon.com/images/I/71gOLg2-kqL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
         },
       ],
       reviews: [
