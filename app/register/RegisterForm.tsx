@@ -11,7 +11,10 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import {signIn} from "next-auth/react";
 import { useRouter } from "next/navigation";
+<<<<<<< HEAD
 import { SafeUser } from "@/types";
+=======
+>>>>>>> 141f9dc5d95eda06cea374529c437ef480899475
 
 interface RegisterFormProps {
     currentUser: SafeUser | null
@@ -33,6 +36,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
 
     const router = useRouter()
 
+<<<<<<< HEAD
     useEffect(() => {
         if (currentUser) {
             router.push("/cart");
@@ -41,6 +45,8 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+=======
+>>>>>>> 141f9dc5d95eda06cea374529c437ef480899475
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
         
@@ -66,12 +72,17 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
         .catch(() => toast.error("Something went wrong"))
         .finally(() => {
             setIsLoading(false);
+<<<<<<< HEAD
         });
     };
 
     if (currentUser) {
         return <p className="text-center">Logged in. Redirecting...</p>;
     }
+=======
+        })
+    };
+>>>>>>> 141f9dc5d95eda06cea374529c437ef480899475
 
     return (
         <>
