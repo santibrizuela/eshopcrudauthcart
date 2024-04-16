@@ -5,7 +5,6 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import prisma from "@/libs/prismadb";
 import bcrypt from 'bcrypt';
 
-<<<<<<< HEAD
 export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
@@ -62,30 +61,5 @@ export const authOptions: AuthOptions = {
     },
     secret: process.env.NEXTAUTH_SECRET,
 }
-=======
-export default NextAuth({
-  adapter: PrismaAdapter(prisma),
-  providers: [
-    GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID as string,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }),
-    CredentialsProvider({
-        name: 'credentials',
-        credentials:{
-            email: {
-                label: 'email',
-                type: 'text'
-            },
-            password:{
-                label: 'password',
-                type: 'password'
-            }
-        },
-        async authorize(credentials) {
-            if(!credentials?.email || !credentials.password){
-                throw new Error('invalid email or password.');
-            }
->>>>>>> 141f9dc5d95eda06cea374529c437ef480899475
 
 export default NextAuth(authOptions);
