@@ -31,7 +31,7 @@ const RegisterForm = () => {
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
         
-        axios.post('/api/register', data).then(() =>{
+        axios.post('/api/register', data).then(() => {
             toast.success('Account created')
 
             signIn("credentials", {
@@ -39,13 +39,13 @@ const RegisterForm = () => {
                 password: data.password,
                 redirect: false,
             }).then((callback) =>{
-                if(callback?.ok){
+                if (callback?.ok) {
                     router.push('/cart');
                     router.refresh();
                     toast.success('Logged In');
                 }
 
-                if(callback?.error){
+                if (callback?.error) {
                     toast.error(callback.error);
                 }
             });
