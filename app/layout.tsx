@@ -13,11 +13,12 @@ export const metadata: Metadata = {
   description: "Ecommerce app, React, TypeScript, Nextjs, MongoDB.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+
   return (
     <html lang="en">
       <body className={`${poppins.className}text-slate-700`}>
