@@ -7,14 +7,13 @@ import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { signOut } from "next-auth/react";
 import BackDrop from "./BackDrop";
-import { User } from "@prisma/client";
 import { SafeUser } from "@/types";
 
 interface UserMenuProps{
     currentUser: SafeUser | null;
 }
 
-const UserMenu:React.FC<UserMenuProps> = ({ currentUser }) => {
+const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleOpen = useCallback(() => {

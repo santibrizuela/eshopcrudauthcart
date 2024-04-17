@@ -36,7 +36,8 @@ const LoginForm: React.FC<LoginFormProps> = (currentUser) => {
             router.push("/cart");
             router.refresh();
         }
-    }, [currentUser, router]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
@@ -61,6 +62,8 @@ const LoginForm: React.FC<LoginFormProps> = (currentUser) => {
     if(currentUser){
         return <p className="text-center">Logged in. Redirecting...</p>;
     }
+
+    console.log(errors)
 
     return (
         <>
